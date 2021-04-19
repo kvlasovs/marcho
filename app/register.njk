@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/register.min.css">
+</head>
+
+<body>
+
+  {% include 'app/module/_header/_header.html' %}
+  <main class="main">
+    
+    {% include 'app/module/_top/_top.html' %}
+
+    <section class="modal">
+      <div class="container">
+        <div class="modal__links">
+          <a class="modal__link modal__link--active" href="#">REGISTER</a>
+          <a class="modal__link" href="#">LOGIN</a>
+        </div>
+        <form class="modal__form" action="#">
+          <label class="modal__label">
+            Username or email adress*
+            <input class="modal__input" type="text" required>
+          </label>
+          <label class="modal__label">
+            Password*
+            <input class="modal__input" type="password" required>
+          </label>
+          <label class="modal__label">
+            <input type="checkbox">
+            Remember me
+          </label>
+          <button class="modal__btn" type="submit">LOG IN</button>
+          <a class="modal__error" href="#">Lost your password?</a>
+        </form>
+      </div>
+    </section>
+
+  </main>
+ {% include 'app/module/_footer/_footer.html' %}
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
