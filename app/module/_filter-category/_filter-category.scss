@@ -1,0 +1,47 @@
+.filter{
+  &__item{
+    padding: 35px 30px 40px;
+    border: 1px solid #ececec;
+    margin-bottom: 40px;
+  }
+  &__title{
+    text-transform: uppercase;
+    color: $title;
+    font-size: 22px;
+    @extend %roboto-400;
+    margin-bottom: 25px;
+  }
+}
+
+.filter-category{
+  &__label{
+    cursor: pointer;
+    margin-bottom: 15px;
+    display: block;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__input{
+    @extend %checkbox-hidden;
+    &:checked + .filter-category__checkbox{
+      background-color: $accent;
+      color: #fff;
+    }
+  }
+  &__checkbox{
+    background-color: #f6f6f6;
+    color: $title;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 20px;
+  }
+}
+
+@media (max-width: 1230px){
+  .blog-page{
+    .filter-category{
+      display: none;
+    }
+  }
+}

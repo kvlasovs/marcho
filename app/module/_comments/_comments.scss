@@ -1,0 +1,63 @@
+.comments-title{
+  margin-bottom: 25px;
+  font-size: 24px;
+  @extend %roboto-700;
+  color: $title;
+  text-transform: uppercase;
+}
+
+.comments{
+  margin-bottom: 40px;
+  display: flex;
+  &__img{
+    margin-right: 30px;
+    min-width: 71px;
+    width: 71px;
+    height: 71px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  &__content-top{
+    display: flex;
+    margin-bottom: 10px;
+  }
+  &__content-name{
+    color: $title;
+    margin-right: 13px;
+    @extend %roboto-400;
+  }
+  &__content-date{
+    padding-left: 13px;
+    border-left: 1px solid $default;
+  }
+  &__content-star{
+    margin-left: auto;
+    margin-right: 0;
+  }
+  &__content-text{
+    margin-bottom: 10px;
+  }
+  &__content-reply{
+    display: inline-block;
+    padding-left: 25px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 15px;
+      height: 13px;
+      top: 7px;
+      background-image: url('../images/icons/reply.svg');
+    }
+  }
+}
+
+@media (max-width: 450px){
+  .comments{
+    &__img{
+      display: none;
+    }
+  }
+}

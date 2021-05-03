@@ -1,0 +1,147 @@
+.blog-page{
+  padding: 120px 0 60px;
+  &__item--slider{
+    .blog-page__item-box{
+      margin-top: -8px;
+    }
+  }
+  &__slider{
+    .slick-next,
+    .slick-prev{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+      width: 40px;
+      height: 40px;
+      background-color: $accent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      outline: none;
+      box-shadow: 0px 7px 20px 0px rgba(254, 62, 87, 0.3);
+      path{
+        fill: #fff;
+      }
+    }
+    .slick-disabled{
+      box-shadow: 0px 7px 20px 0px rgba(168, 168, 168, 0.3);
+      background-color: #fff;
+      path{
+        fill: $accent;
+      }
+    }
+    .slick-next{
+      right: 40px;
+    }
+    .slick-prev{
+      left: 40px;
+    }
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content{
+    width: 770px;
+    margin-right: 30px;
+  }
+  &__aside{
+    width: 370px;
+  }
+  &__item{
+    margin-bottom: 60px;
+    &.blog-page__item--no-image{
+      border-top: 1px solid #ececec;
+      box-shadow: 0px 20px 60px 0px rgba(202, 202, 202, 0.35);
+    }
+  }
+  &__item-link{
+    display: block;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+  }
+  &__img{
+    min-width: 770px;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+  }
+  &__item-box{
+    border: 1px solid #ececec;
+    border-top: none;
+    padding: 40px;
+  }
+  &__item-title{
+    color: $title;
+    font-size: 22px;
+    @extend %roboto-700;
+    line-height: 32px;
+    margin-bottom: 20px;
+    transition: all .3s;
+    &:hover{
+      color: $accent;
+    }
+  }
+  .blog-box{
+    justify-content: start;
+    &__author{
+      margin-right: 30px;
+    }
+  }
+}
+
+@media (max-width: 1230px){
+  .blog-page{
+    &__inner{
+      flex-direction: column;
+    }
+    &__content{
+      width: 100%;
+      margin-right: 0;
+    }
+    &__aside{
+      width: 100%;
+      order: -1;
+    }
+    &__img{
+      min-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 620px){
+  .blog-page{
+    padding: 60px 0;
+    &__item-box{
+      padding: 20px;
+    }
+    &__img{
+      height: 260px;
+    }
+  }
+}
+
+@media (max-width: 375px){
+  .blog-page{
+    &__item-box{
+      padding: 10px 5px;
+    }
+    &__img{
+      height: 170px;
+    }
+    &__slider{
+      .slick-next{
+        right: 10px;
+      }
+      .slick-prev{
+        left: 10px;
+      }
+    }
+  }
+}

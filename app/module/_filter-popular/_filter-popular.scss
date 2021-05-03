@@ -1,0 +1,44 @@
+.filter{
+  &__item{
+    padding: 35px 30px 40px;
+    border: 1px solid #ececec;
+    margin-bottom: 40px;
+  }
+  &__title{
+    text-transform: uppercase;
+    color: $title;
+    font-size: 22px;
+    @extend %roboto-400;
+    margin-bottom: 25px;
+  }
+}
+
+.filter-popular{
+  &__label{
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 8px;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  &__input{
+    @extend %checkbox-hidden;
+    &:checked + .filter-popular__checkbox{
+      background-color: $accent;
+      color: #fff;
+      border-color: $accent;
+    }
+  }
+  &__checkbox{
+    border: 1px solid $default;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 1230px){
+  .blog-page{
+    .filter-popular{
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.shop{
+  &__filter-btn{
+    display: none;
+  }
+}
+
+@media (max-width: 1230px) {
+  .shop{
+    &__filter-btn{
+      display: block;
+      border: none;
+      background-color: $accent;
+      padding: 0;
+      width: 60px;
+      height: 60px;
+      position: fixed;
+      right: 0;
+      z-index: 101;
+      bottom: 50px;
+    }
+  }
+}

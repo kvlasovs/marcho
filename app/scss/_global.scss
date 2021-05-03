@@ -50,6 +50,7 @@ a{
   justify-content: center;
   padding-left: 25px;
   position: relative;
+  flex-wrap: wrap;
   &::before{
     content: '';
     position: absolute;
@@ -92,43 +93,18 @@ a{
   background-color: $bg;
 }
 
-.pagination{
-  display: flex;
-  justify-content: center;
-  padding: 30px 0;
-  .pagination__list{
-    display: flex;
-    padding: 0 35px;
+
+
+@media (max-width: 620px){
+  .title{
+    font-size: 40px;
+    line-height: 48px;
   }
-  &__item{
-    padding: 0 15px;
-  }
-  &__link--active{
-    color: $accent;
-  }
-  &__arrows{
-    text-transform: uppercase;
-    position: relative;
-    &::before{
-      content: '';
-      position: absolute;
-      width: 5px;
-      height: 10px;
-      top: 8px;
-    }
-  }
-  &__prev{
-    padding-left: 15px;
-    &::before{
-      left: 0;
-      background-image: url('../images/icons/angle_left.svg');
-    }
-  }
-  &__next{
-    padding-right: 15px;
-    &::before{
-      right: 0;
-      background-image: url('../images/icons/angle_right.svg');
-    }
+}
+
+@media (max-width: 375px){
+  .title{
+    font-size: 32px;
+    line-height: 40px;
   }
 }

@@ -1,0 +1,65 @@
+.filter{
+  &__item{
+    padding: 35px 30px 40px;
+    border: 1px solid #ececec;
+    margin-bottom: 40px;
+  }
+  &__title{
+    text-transform: uppercase;
+    color: $title;
+    font-size: 22px;
+    @extend %roboto-400;
+    margin-bottom: 25px;
+  }
+}
+
+.filter-price{
+  &__label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+  }
+  &__btn{
+    @extend %btn;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.irs--flat .irs-line{
+  top: 13px;
+  height: 5px;
+  background-color: #ececec;
+  border-radius: 0;
+}
+
+.irs--flat .irs-handle{
+  top: 0px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  box-shadow: 0px 0px 13px 0px rgba(90, 90, 90, 0.2);
+}
+
+.irs--flat .irs-handle>i:first-child{
+  display: none;
+}
+
+.irs--flat .irs-bar{
+  background-color: $accent;
+  height: 5px;
+  top: 13px;
+}
+
+.irs-from, .irs-to, .irs-single{
+  display: none;
+}
+
+.irs--flat .irs-min, .irs--flat .irs-max{
+  display: none;
+}
+
+.irs--flat{
+  height: 30px;
+}

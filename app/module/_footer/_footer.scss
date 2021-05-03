@@ -80,14 +80,61 @@ footer{
 }
 
 .footer-bottom{
-  height: 75px;
+  min-height: 75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 12px;
+  flex-wrap: wrap;
   &__accept-img{
     display: inline;
     margin-left: 25px;
     vertical-align: middle;
+  }
+}
+
+@media (max-width: 1050px){
+  .footer-top{
+    flex-wrap: wrap;
+    &__item-form{
+      max-width: 100%;
+      margin-top: 30px;
+    }
+  }
+}
+
+@media (max-width: 860px){
+  .footer-top{
+    &__contact{
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 620px){
+  .footer-top{
+    &__form{
+      flex-wrap: wrap;
+    }
+  }
+  .footer-bottom{
+    justify-content: center;
+    &__copy{
+      width: 100%;
+      text-align: center;
+    }
+    &__accept-img{
+      margin-left: 15px;
+    }
+  }
+}
+
+@media (max-width: 450px){
+  .footer-top{
+    &__nav{
+      margin-top: 30px;
+    }
   }
 }
